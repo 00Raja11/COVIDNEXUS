@@ -19,7 +19,7 @@
 ## Live Demo
 
 Hosted on GitHub Pages (frontend only):  
-[https://your-username.github.io/CovidNexus](https://your-username.github.io/CovidNexus)
+[https://00Raja11.github.io/CovidNexus]
 
 > ⚠️ **Note:** Contact form requires backend (Node.js + MongoDB) to store messages. Only frontend is live on GitHub Pages.
 
@@ -27,17 +27,17 @@ Hosted on GitHub Pages (frontend only):
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/CovidNexus.git
+   git clone https://github.com/00Raja11/CovidNexus.git
 Navigate to project folder:
 
-cd CovidNexus
+1. cd CovidNexus
 Install dependencies:
 
-npm install
+2. npm install
 Start MongoDB (local server):
 
-mongod
+3. mongod
 Start Node.js server:
 
-node server.js
+4. node server.js
 Open http://localhost:3000 in your browser.
