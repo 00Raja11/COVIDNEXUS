@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Covid-19 Information</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Inline styles for form messages */
+    .form-message {
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    .form-message.success {
+      color: #4caf50;
+    }
+
+    .form-message.error {
+      color: #f44336;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li class="item"><a href="index.html">Home</a></li>
+      <li class="item"><a href="about.html">About</a></li>
+      <li class="item"><a href="mhfw.html">MHFW Website</a></li>
+      <li class="item"><a href="hospitals.html">Hospitals</a></li>
+      <li class="item"><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <div class="box">
+      <p>If you have any queries or require information regarding COVID-19, feel free to reach out:</p>
+      <ul>
+        <li><strong>Helpline Number:</strong> +91-11-23978046</li>
+        <li><strong>Toll-Free:</strong> 1075</li>
+        <li><strong>Email:</strong> <a href="mailto:ncov2019@gov.in">ncov2019@gov.in</a></li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Feedback / Inquiry Form</h2>
+      <form id="contactForm" class="contact-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <script>
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const data = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value
+          };
+
+          try {
+            const res = await fetch('/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+
+            const result = await res.json();
+            alert(result.message);
+
+            if (result.success) {
+              form.reset();
+            }
+
+          } catch (err) {
+            alert('Failed to send message. Try again.');
+            console.error(err);
+          }
+        });
+      </script>
+
+
+</body>
+
+</html>

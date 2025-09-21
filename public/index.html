@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Covid-19 - Stay Home Stay Safe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li class="item"><a href="index.html">Home</a></li>
+      <li class="item"><a href="about.html">About</a></li>
+      <li class="item"><a href="mhfw.html">MHFW Website</a></li>
+      <li class="item"><a href="hospitals.html">Hospitals</a></li>
+      <li class="item"><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Covid-19 - Stay Home Stay Safe</h1>
+
+    <!-- Country selector dropdown -->
+    <label for="countrySelect">Select Country:</label>
+    <select id="countrySelect" name="countrySelect">
+      <option value="global">Global</option>
+    </select>
+
+    <!-- COVID Stats -->
+    <div class="covid-stats">
+      <div class="stat">
+        <h2 id="cases">-</h2>
+        <p>Confirmed Cases</p>
+      </div>
+      <div class="stat recovered">
+        <h2 id="recovered">-</h2>
+        <p>Recovered</p>
+      </div>
+      <div class="stat deaths">
+        <h2 id="deaths">-</h2>
+        <p>Deaths</p>
+      </div>
+    </div>
+
+    <!-- COVID Chart -->
+    <div class="box">
+      <h2>COVID-19 Statistics Chart</h2>
+      <canvas id="covidChart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Information Boxes -->
+    <div class="box">
+      <h2>#IndiaFightsCorona COVID-19</h2>
+      <p>
+        Government of India is taking all necessary steps to ensure that we are prepared well to face the
+        challenge and threat posed by the growing pandemic of COVID-19. With active
+        support of the people of India, we have been able to contain the spread of the Virus in our country.
+      </p>
+      <p>
+        The most important factor in preventing the spread of the Virus locally is to empower the citizens
+        with the right information and taking precautions as per the advisories issued by Ministry of
+        Health & Family Welfare.
+      </p>
+    </div>
+
+    <div class="box">
+      <h2>#StayHome - How to protect yourself</h2>
+
+      <h3>Dos</h3>
+      <ul>
+        <li>Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub</li>
+        <li>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</li>
+        <li>Avoid close contact (1 meter or 3 feet) with people who are unwell</li>
+        <li>Stay home and self-isolate if you feel unwell</li>
+      </ul>
+
+      <h3>Don'ts</h3>
+      <ul>
+        <li>Touch your eyes, nose, or mouth if your hands are not clean</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>#FAQs - Frequently Asked Questions</h2>
+
+      <div class="question">
+        <p><strong>Q:</strong> What are the symptoms of COVID-19?</p>
+        <p><strong>A:</strong> The most common symptoms are fever, cough, shortness of breath, and breathing difficulties. Severe cases may cause pneumonia, acute respiratory distress, or even death. Symptoms appear in 2-14 days.</p>
+      </div>
+
+      <div class="question">
+        <p><strong>Q:</strong> What is the recovery time for COVID-19?</p>
+        <p><strong>A:</strong> For mild cases, about 2 weeks. For severe cases, 3–6 weeks.</p>
+      </div>
+
+      <div class="question">
+        <p><strong>Q:</strong> How long does the coronavirus last on surfaces?</p>
+        <p><strong>A:</strong> Studies suggest it can survive from a few hours up to several days depending on surface type.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
